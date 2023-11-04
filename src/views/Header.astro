@@ -1,59 +1,50 @@
 ---
-import CloseIcon from "../components/icons/close";
-import HamburgerIcon from "../components/icons/hamburger";
-import DarkModeToggle from "./dark-mode";
+import CloseIcon from '../components/icons/Close.astro'
+import HamburgerIcon from '../components/icons/Hamburger.astro'
+import DarkModeToggle from './dark-mode'
 ---
 
-    <header class="dark:bg-black sticky top-[0.1px] bg-white text-black dark:text-white">
-      <nav
-        class="py-[40px] px-0 grid justify-between items-center nav my-0 mx-auto w-[90%] max-w-[1200px] overflow-hidden"
-        id="nav"
-      >
-        <h3 class="text-3xl font-concert uppercase z-[1]">Fran Saa</h3>
-        <ul class="nav__links items-center bg-white dark:bg-black">
-          <li class="nav__item">
-            <a
-              href="#me"
-              class="nav__link font-bold text-black dark:text-white"
-            >
-              Sobre Mi
-            </a>
-          </li>
-          <li class="nav__item">
-            <a
-              href="#projects"
-              class="nav__link font-bold text-black dark:text-white"
-            >
-              Proyectos
-            </a>
-          </li>
-          <li class="nav__item">
-            <a
-              href="#background"
-              class="nav__link font-bold text-black dark:text-white"
-            >
-              Mi Background
-            </a>
-          </li>
-          <li>
-            <DarkModeToggle client:only />
-          </li>
-        </ul>
-
-        <a
-          href="#nav"
-          class="nav__hamburguer"
-          aria-label="Open the menu"
-        >
-          <HamburgerIcon className="text-2xl text-black dark:text-white" />
+<header
+  class="dark:bg-black sticky top-[0.1px] bg-white text-black dark:text-white"
+>
+  <nav
+    class="py-[40px] px-0 grid justify-between items-center nav my-0 mx-auto w-[90%] max-w-[1200px] overflow-hidden"
+    id="nav"
+  >
+    <h3 class="text-3xl font-concert uppercase z-[1]">Fran Saa</h3>
+    <ul class="nav__links items-center bg-white dark:bg-black">
+      <li class="nav__item">
+        <a href="#me" class="nav__link font-bold text-black dark:text-white">
+          Sobre Mi
         </a>
-
+      </li>
+      <li class="nav__item">
         <a
-          href="#"
-          class="nav__close"
-          aria-label="Close the menu"
+          href="#projects"
+          class="nav__link font-bold text-black dark:text-white"
         >
-          <CloseIcon className="text-3xl text-black dark:text-white" />
+          Proyectos
         </a>
-      </nav>
-    </header>
+      </li>
+      <li class="nav__item">
+        <a
+          href="#background"
+          class="nav__link font-bold text-black dark:text-white"
+        >
+          Mi Background
+        </a>
+      </li>
+      <li>
+        <DarkModeToggle client:only />
+      </li>
+    </ul>
+
+    <a href="#nav" class="nav__hamburguer" aria-label="Open the menu">
+      <HamburgerIcon class="text-2xl text-black dark:text-white" />
+    </a>
+
+    <a href="#" class="nav__close" aria-label="Close the menu">
+      <CloseIcon class="text-3xl text-black dark:text-white" />
+    </a>
+  </nav>
+</header>
