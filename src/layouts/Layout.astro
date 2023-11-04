@@ -2,44 +2,68 @@
 import '../styles/app.css'
 ---
 
-<!DOCTYPE html>	
-<html lang='en'>
-	<head>
-		<meta charset='UTF-8' />
-		<meta
-			name='description'
-			content='Portfolio Francisco Javier Saa Besteiro, FullStack Engineer'
-		/>
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<meta name='generator' content={Astro.generator} />
-		<meta
-			name='keywords'
-			content='fullstack, engineer, developer, react, reactjs, javascript, typescript, portfolio, nodejs, python, astrojs'
-		/>
-		<meta name='twitter:card' content='summary_large_image' />
-		<meta name='twitter:site' content='@franjsb1903' />
-		<title>Fran Saa - FullStack Engineer</title>
-	</head>
-	<body>
-		<slot />
-		<script is:inline>
-			const theme = (() => {
-				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-					return localStorage.getItem('theme')
-				}
-				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					return 'dark'
-				}
-				return 'light'
-			})()
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Portfolio Francisco Javier Saa Besteiro, FullStack Engineer"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
-			if (theme === 'light') {
-				document.documentElement.classList.remove('dark')
-			} else {
-				document.documentElement.classList.add('dark')
-			}
-			window.localStorage.setItem('theme', theme)
-		</script>
-	</body>
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="keywords"
+      content="fullstack, engineer, developer, react, reactjs, javascript, typescript, portfolio, nodejs, python, astrojs"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@franjsb1903" />
+    <title>Fran Saa - FullStack Engineer</title>
+  </head>
+  <body>
+    <slot />
+    <script is:inline>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark'
+        }
+        return 'light'
+      })()
+
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark')
+      } else {
+        document.documentElement.classList.add('dark')
+      }
+      window.localStorage.setItem('theme', theme)
+    </script>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script is:inline>
+      new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: false,
+        // autoplay: {
+        //   delay: 5000,
+        // },
+
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      })
+    </script>
+  </body>
 </html>

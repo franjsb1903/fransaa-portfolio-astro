@@ -17,10 +17,11 @@
 }
 
 .nav > ul {
-  > li {
-    display: none;
-  }
   min-height: auto;
+}
+
+.nav > ul > li {
+  display: none;
 }
 
 .nav:target {
@@ -31,10 +32,10 @@
 
 .nav:target > ul {
   min-height: 100vh;
+}
 
-  > li {
-    display: inline-block;
-  }
+.nav:target > ul > li {
+  display: inline-block;
 }
 
 .nav__hamburguer,
@@ -77,6 +78,19 @@
   text-decoration: none;
   font-size: 1.2rem;
   letter-spacing: 2px;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-pagination-bullet {
+  background: rgb(174 127 255) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #4c1d95 !important;
 }
 
 @media (min-width: 768px) {
