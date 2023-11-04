@@ -39,6 +39,7 @@
     "rules": {
         "@typescript-eslint/no-unused-vars": "error",
         "indent": "off",
-        "no-useless-constructor": "off"
+        "no-useless-constructor": "off",
+        "react/self-closing-comp": "off"
     }
 }

@@ -1,9 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Header from '../views/Header.astro';
+import AboutMe from '../views/AboutMe.astro'
+import Header from '../views/Header.astro'
 ---
 
 <Layout>
-  <Header />
-  <main />
+  <main class="bg-white dark:bg-black">
+    <Header />
+    <section id="me" class="min-h-screen px-5 md:px-20 lg:px-40">
+      <AboutMe />
+    </section>
+  </main>
 </Layout>
