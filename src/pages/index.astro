@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import DarkModeToggle from '../views/dark-mode';
 ---
 
-<Layout title='Welcome to Astro.'>
-	<main></main>
+<Layout>
+  <DarkModeToggle client:only />
+  <main />
 </Layout>
