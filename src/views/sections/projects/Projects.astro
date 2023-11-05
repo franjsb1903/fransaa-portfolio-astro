@@ -1,6 +1,11 @@
 ---
 import Slider from '../../slider/Slider.astro'
 import TitleSection from '../../text/TitleSection.astro'
+import { getProjects } from '../../../services/projects'
+
+const projects = await getProjects()
+
+console.log({ projects })
 ---
 
 <section id="projects" class="px-2 md:px-20 mt-5">
