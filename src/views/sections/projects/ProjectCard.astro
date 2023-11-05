@@ -1,4 +1,7 @@
 ---
+import IconButton from '../../../components/IconButton.astro'
+import Github from '../../../components/icons/Github.astro'
+import Url from '../../../components/icons/Url.astro'
 import type { Project } from '../../../models/project'
 export interface Props {
   project: Project
@@ -24,5 +27,17 @@ const { project } = Astro.props
     >
       {project.tools?.map(tool => tool).join(' / ')}
     </p>
+  </section>
+  <section class="flex justify-evenly w-full">
+    <IconButton href={project.repo}>
+      <Github />
+    </IconButton>
+    {
+      project.link ? (
+        <IconButton href={project.link}>
+          <Url />
+        </IconButton>
+      ) : null
+    }
   </section>
 </article>
