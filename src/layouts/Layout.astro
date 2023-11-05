@@ -64,6 +64,20 @@ import '../styles/app.css'
           el: '.swiper-pagination',
         },
       })
+
+      new Swiper('.swiper-background', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+          delay: 3000,
+        },
+
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        slidesPerGroupAuto: true,
+        slidesPerView: 10,
+      })
     </script>
   </body>
 </html>

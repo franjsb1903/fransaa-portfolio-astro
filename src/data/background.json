@@ -1,0 +1,29 @@
+{
+  "tools": [
+    "javascript",
+    "typescript",
+    "python",
+    "java",
+    "sql",
+    "reactjs",
+    "react-native",
+    "nextjs",
+    "redux",
+    "astro",
+    "html",
+    "css",
+    "tailwindcss",
+    "nodejs",
+    "express",
+    "jest",
+    "testing-library",
+    "git",
+    "gitlab",
+    "gitflow",
+    "postgresql",
+    "mongo-db",
+    "docker",
+    "vitejs",
+    "azure"
+  ]
+}
