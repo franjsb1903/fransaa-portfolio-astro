@@ -1,11 +1,9 @@
 ---
-import Slider from '../../slider/Slider.astro'
+import Slider from './Slider.astro'
 import TitleSection from '../../text/TitleSection.astro'
 import { getProjects } from '../../../services/projects'
 
 const projects = await getProjects()
-
-console.log({ projects })
 ---
 
 <section id="projects" class="px-2 md:px-20 mt-5">
@@ -13,6 +11,6 @@ console.log({ projects })
   <div
     class="flex flex-wrap flex-col lg:flex-row items-center justify-center md:justify-start mt-10"
   >
-    <Slider />
+    <Slider projects={projects} />
   </div>
 </section>
