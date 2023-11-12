@@ -2,6 +2,8 @@
 import IconButton from '../../../components/IconButton.astro'
 import Github from '../../../components/icons/Github.astro'
 import Url from '../../../components/icons/Url.astro'
+import { formatTool } from '../../../utils/tools'
+import { background } from '../../../data/background'
 import type { Project } from '../../../models/project'
 export interface Props {
   project: Project
@@ -25,7 +27,11 @@ const { project } = Astro.props
     <p
       class="text-[1rem] text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-violet-600 p-2"
     >
-      {project.tools?.map(tool => tool).join(' / ')}
+      {
+        project.tools
+          ?.map(tool => formatTool(tool as keyof typeof background))
+          .join(' / ')
+      }
     </p>
   </section>
   <section class="flex justify-evenly w-full">
@@ -41,3 +47,4 @@ const { project } = Astro.props
     }
   </section>
 </article>
+ ../../../data/background

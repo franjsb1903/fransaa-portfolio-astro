@@ -1,5 +1,8 @@
 ---
 import TitleSection from '../../text/TitleSection.astro'
+import BackgroundText from '../../../components/BackgroundText.astro'
+import BackgroundTool from '../../../containers/BackgroundTool.astro'
+import { background } from '../../../data/background'
 import AstroIcon from '../../../components/icons/tools/AstroIcon.astro'
 import Azure from '../../../components/icons/tools/Azure.astro'
 import Css from '../../../components/icons/tools/Css.astro'
@@ -27,34 +30,193 @@ import Vitejs from '../../../components/icons/tools/Vitejs.astro'
 
 <section id="background" class="px-2 md:px-20 mt-5">
   <TitleSection>Background</TitleSection>
-  <div
-    class="swiper-background shadow-lg shadow-gray-400 dark:shadow-violet-400 overflow-hidden"
-  >
+  <div class="swiper-background overflow-hidden mt-10">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><AstroIcon /></div>
-      <div class="swiper-slide"><Azure /></div>
-      <div class="swiper-slide"><Css /></div>
-      <div class="swiper-slide"><Azure /></div>
-      <div class="swiper-slide"><Docker /></div>
-      <div class="swiper-slide"><Express /></div>
-      <div class="swiper-slide"><Git /></div>
-      <div class="swiper-slide"><Html /></div>
-      <div class="swiper-slide"><Java /></div>
-      <div class="swiper-slide"><Javascript /></div>
-      <div class="swiper-slide"><Jest /></div>
-      <div class="swiper-slide"><Mongodb /></div>
-      <div class="swiper-slide"><Nextjs /></div>
-      <div class="swiper-slide"><Nodejs /></div>
-      <div class="swiper-slide"><Postgresql /></div>
-      <div class="swiper-slide"><Python /></div>
-      <div class="swiper-slide"><React /></div>
-      <div class="swiper-slide"><ReactNative /></div>
-      <div class="swiper-slide"><Redux /></div>
-      <div class="swiper-slide"><Sql /></div>
-      <div class="swiper-slide"><Tailwind /></div>
-      <div class="swiper-slide"><TestingLibrary /></div>
-      <div class="swiper-slide"><Typescript /></div>
-      <div class="swiper-slide"><Vitejs /></div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Javascript />
+          <BackgroundText>
+            {background.javascript}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Java />
+          <BackgroundText>
+            {background.java}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Python />
+          <BackgroundText>
+            {background.python}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Html />
+          <BackgroundText>
+            {background.html}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Css />
+          <BackgroundText>
+            {background.css}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Typescript />
+          <BackgroundText>
+            {background.typescript}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Nodejs />
+          <BackgroundText>
+            {background.nodejs}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <React />
+          <BackgroundText>
+            {background.reactjs}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <ReactNative />
+          <BackgroundText>
+            {background.reactnative}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Tailwind />
+          <BackgroundText>
+            {background.tailwindcss}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <AstroIcon />
+          <BackgroundText>
+            {background.astro}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Nextjs />
+          <BackgroundText>
+            {background.nextjs}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Express />
+          <BackgroundText>
+            {background.express}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Redux />
+          <BackgroundText>
+            {background.redux}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Vitejs />
+          <BackgroundText>
+            {background.vitejs}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Jest />
+          <BackgroundText>
+            {background.jest}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <TestingLibrary />
+          <BackgroundText>
+            {background.testinglibrary}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Mongodb />
+          <BackgroundText>
+            {background.mongodb}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Sql />
+          <BackgroundText>
+            {background.sql}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Postgresql />
+          <BackgroundText>
+            {background.postgresql}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Git />
+          <BackgroundText>
+            {background.git}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Docker />
+          <BackgroundText>
+            {background.docker}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
+      <div class="swiper-slide">
+        <BackgroundTool>
+          <Azure />
+          <BackgroundText>
+            {background.azure}
+          </BackgroundText>
+        </BackgroundTool>
+      </div>
     </div>
   </div>
 </section>
+ ../../../data/background
