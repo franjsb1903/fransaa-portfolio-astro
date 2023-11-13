@@ -2,15 +2,20 @@
 import Slider from './Slider.astro'
 import TitleSection from '../../text/TitleSection.astro'
 import { getProjects } from '../../../services/projects'
+import DescriptionSection from '../../text/DescriptionSection.astro'
 
 const projects = await getProjects()
 ---
 
 <section id="projects" class="px-2 md:px-20 mt-5">
   <TitleSection>Proyectos</TitleSection>
-  <div
+  <DescriptionSection>
+    Estos son algunos de mis proyectos personales, en los que podrás revisar el
+    código fuente y, en algunos casos, probarlos en vivo.
+  </DescriptionSection>
+  <article
     class="flex flex-wrap flex-col lg:flex-row items-center justify-center md:justify-start mt-10"
   >
     <Slider projects={projects} />
-  </div>
+  </article>
 </section>
