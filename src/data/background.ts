@@ -28,4 +28,5 @@ export const background = {
   threejs: 'Three.js',
   'remix-run': 'Remix Run',
   'json-web-server': 'JSON Web Server',
+  preact: 'Preact',
 }
