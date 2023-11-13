@@ -1,0 +1,21 @@
+---
+export interface Props {
+  url: string
+}
+
+const { url } = Astro.props
+---
+
+<div
+  class="flex mt-10 md:w-[300px] md:h-[300px] w-[250px] h-[250px] rounded-full justify-center items-center bg-gradient-to-r p-[6px] from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
+>
+  <div
+    class="flex md:w-[280px] md:h-[280px] w-[230px] h-[230px] justify-center items-center rounded-full overflow-hidden bg-black"
+  >
+    <img
+      src={url}
+      alt="Me Emoji"
+      class="rounded-md md:w-[300px] md:h-[280px] w-[250px] h-[230px]"
+    />
+  </div>
+</div>

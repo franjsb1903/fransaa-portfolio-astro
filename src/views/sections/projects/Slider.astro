@@ -1,0 +1,22 @@
+---
+import type { Project } from '../../../models/project'
+import ProjectCard from './ProjectCard.astro'
+export interface Props {
+  projects: Project[]
+}
+
+const { projects } = Astro.props
+---
+
+<div class="swiper shadow-lg shadow-gray-400 dark:shadow-violet-400">
+  <div class="swiper-wrapper">
+    {
+      projects.map(project => (
+        <div class="swiper-slide">
+          <ProjectCard project={project} />
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-pagination"></div>
+</div>

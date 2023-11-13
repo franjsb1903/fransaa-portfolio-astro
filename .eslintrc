@@ -1,48 +1,14 @@
 {
-    "env": {
-        "es2022": true,
-        "node": true,
-        "browser": true
-    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "eslint-config-prettier",
-        "standard",
-        "plugin:astro/recommended"
+        "./node_modules/standard/eslintrc.json",
+        "prettier"
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-        "no-unused-vars": "warn",
-        "@typescript-eslint/no-unused-vars": [
-            "warn",
-            {
-                "argsIgnorePattern": "^_",
-                "varsIgnorePattern": "^_",
-                "caughtErrorsIgnorePattern": "^_"
-            }
-        ],
-        "no-multiple-empty-lines": "off",
-        "no-tabs": "off",
-        "indent": [
-            "warn",
-            "tab"
-        ],
-        "quotes": [
-            "warn",
-            "single"
-        ],
-        "jsx-quotes": [
-            "warn",
-            "prefer-single"
-        ],
-        "eol-last": "off"
-    },
     "overrides": [
         {
             "files": [
@@ -56,8 +22,25 @@
                 ]
             },
             "rules": {
-                "astro/no-set-html-directive": "error"
+                "semi": "off",
+                "astro/semi": "off"
+            }
+        },
+        {
+            "files": [
+                "*.ts",
+                "*.tsx"
+            ],
+            "parserOptions": {
+                "project": "./tsconfig.json"
             }
         }
-    ]
+    ],
+    "rules": {
+        "@typescript-eslint/no-unused-vars": "error",
+        "indent": "off",
+        "no-useless-constructor": "off",
+        "react/self-closing-comp": "off",
+        "react/jsx-key": "off"
+    }
 }

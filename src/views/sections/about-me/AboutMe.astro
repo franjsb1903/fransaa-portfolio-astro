@@ -1,0 +1,26 @@
+---
+import Avatar from '../../../components/Avatar.astro'
+import Links from '../about-me/Links.astro'
+---
+
+<section id="me" class="min-h-screen px-5 md:px-20 lg:px-40">
+  <div class="flex flex-col items-center justify-center cursor-default">
+    <h2 class="text-2xl font-bold lg:text-4xl text-black dark:text-white">
+      Francisco Javier Saa Besteiro
+    </h2>
+    <h2 class="text-sm md:text-lg lg:text-2xl text-gray-500 mt-4">
+      Ingeniero Informático | FullStack Engineer
+    </h2>
+    <Avatar url="/img/me.PNG" />
+    <p
+      class="my-10 px-3 md:px-0 text-md md:text-lg md:max-w-xl text-center text-gray-700 dark:text-gray-500"
+    >
+      ¡Hola 👋🏼! Soy un Full Stack Engineer de {new Date().getFullYear() - 1999}
+       años graduado en Ingeniería Informática, gran apasionado de la tecnología
+      y el desarrollo de software. Aquí podrás encontrar algunos de mis
+      proyectos personales y conocimientos en tecnologías. ¡Visita los
+      siguientes enlaces para más!
+    </p>
+    <Links />
+  </div>
+</section>
